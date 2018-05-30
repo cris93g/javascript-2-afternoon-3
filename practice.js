@@ -156,10 +156,9 @@ uniq(names, function(uniqArr){
 
 //Code Here 
 function each(names,cb) {
-  for (var i=0; i <names.length; i++) {
-    cb(names[i])
-  }
-  
+  for (var i = 0; i < names.length; i++) {
+    
+  }return names;}
 
 // Do not edit the code below.
 each(names, function(item, indice){
