@@ -51,8 +51,8 @@ first(names, function(firstName){
 */
 
 //Code Here
-function last(array,cb){
-  return cb(array.slice(-1))
+function last(arr,cb){
+  cb(arr[arr.length -1]);
 }
 
 // Do not edit the code below.
@@ -73,7 +73,7 @@ last(names, function(lastName){
 
 //Code Here
 function multiply(num1,num2,cb){
-  return cb(num1*num2)
+  cb(num1* num2);
 }
 
 // Do not edit the code below.
@@ -94,9 +94,12 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
-function contains(arr,name,cb){
-  for()
-}
+function contains(arr, name, cb){
+if (arr.includes(name)){
+cb(true);
+}else{cb(false);
+    }
+  }
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -118,9 +121,23 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
-function uniq(arr,cb){
-  
+
+function uniq(arr, cb) {
+for (var i = 0; i < arr.length; i++) {
+for (var c = i + 1; c < arr.length; c++) {
+  if (arr[i] === arr[c]) {
+  arr.splice(c, 1)
+  }
+  }
+  }
+  cb(arr);
 }
+
+ 
+  
+ 
+
+
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -138,6 +155,11 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
+function each(names,cb) {
+  for (var i=0; i <names.length; i++) {
+    cb(names[i])
+  }
+  
 
 // Do not edit the code below.
 each(names, function(item, indice){
